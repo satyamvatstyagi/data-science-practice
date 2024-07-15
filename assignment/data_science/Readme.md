@@ -48,30 +48,22 @@
 ## Explaination for the evaluation metrics and the classification reports for both the Naive Bayes and Decision Tree models:
 
 ### Accuracy
-Accuracy measures the proportion of correctly predicted instances out of the total instances. It is calculated as:
-
-$ \text{Accuracy} = \frac{\text{True Positives} + \text{True Negatives}}{\text{Total Instances}} $
+Accuracy measures the proportion of correctly predicted instances out of the total instances.
 
 - **High Accuracy** indicates that the model is performing well overall, but it can be misleading in the case of imbalanced datasets.
 
 ### Precision
-Precision measures the proportion of correctly predicted positive instances out of all instances predicted as positive. It is calculated as:
-
-$ \text{Precision} = \frac{\text{True Positives}}{\text{True Positives} + \text{False Positives}} $
+Precision measures the proportion of correctly predicted positive instances out of all instances predicted as positive.
 
 - **High Precision** indicates that the model has a low false positive rate.
 
 ### Recall (Sensitivity or True Positive Rate)
-Recall measures the proportion of correctly predicted positive instances out of all actual positive instances. It is calculated as:
-
-$ \text{Recall} = \frac{\text{True Positives}}{\text{True Positives} + \text{False Negatives}} $
+Recall measures the proportion of correctly predicted positive instances out of all actual positive instances.
 
 - **High Recall** indicates that the model has a low false negative rate.
 
 ### F1 Score
-The F1 score is the harmonic mean of precision and recall. It balances the trade-off between precision and recall and is calculated as:
-
-$ \text{F1 Score} = 2 \times \frac{\text{Precision} \times \text{Recall}}{\text{Precision} + \text{Recall}} $
+The F1 score is the harmonic mean of precision and recall. It balances the trade-off between precision and recall.
 
 - **High F1 Score** indicates that the model performs well in terms of both precision and recall.
 
