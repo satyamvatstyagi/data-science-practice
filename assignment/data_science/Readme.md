@@ -97,28 +97,28 @@ The F1 score is the harmonic mean of precision and recall. It balances the trade
 ## Decision Tree - Evaluation Metrics
 
 ### Metrics:
-- **Accuracy**: 94.65%
-- **Precision**: 93.70%
-- **Recall**: 95.55%
-- **F1 Score**: 94.61%
+- **Accuracy**: 82.56%
+- **Precision**: 83.01%
+- **Recall**: 80.26%
+- **F1 Score**: 81.61%
 
 ### Classification Report:
 - **Class 0 (No Heart Attack)**:
-  - Precision: 97%
-  - Recall: 92%
-  - F1 Score: 95%
+  - Precision: 82%
+  - Recall: 85%
+  - F1 Score: 83%
   - Support: 745 samples
 - **Class 1 (Heart Attack)**:
-  - Precision: 93%
-  - Recall: 96%
-  - F1 Score: 94%
+  - Precision: 83%
+  - Recall: 80%
+  - F1 Score: 82%
   - Support: 694 samples
 
 ### Explanation:
-- **Accuracy** of 94.65% indicates that the Decision Tree model correctly predicted about 95% of the instances overall.
-- **Precision** of 93.70% for class 1 (Heart Attack) means that when the model predicts a heart attack, it is correct about 94% of the time.
-- **Recall** of 95.55% for class 1 indicates that the model correctly identifies about 96% of actual heart attack cases.
-- **F1 Score** of 94.61% balances the precision and recall, showing excellent performance in predicting heart attacks.
+- **Accuracy** of 82.56% indicates that the Decision Tree model correctly predicted about 83% of the instances overall.
+- **Precision** of 83.01% for class 1 (Heart Attack) means that when the model predicts a heart attack, it is correct about 83% of the time.
+- **Recall** of 80.26% for class 1 indicates that the model correctly identifies about 80% of actual heart attack cases.
+- **F1 Score** of 81.61% balances the precision and recall, showing good performance in predicting heart attacks.
 - **High precision and recall for both classes** suggest that the Decision Tree model is effective at distinguishing between heart attack and non-heart attack cases. It performs well in correctly identifying true positives and minimizing false negatives and false positives.
 
 ## Conclusion:
