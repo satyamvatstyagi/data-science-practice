@@ -15,18 +15,30 @@ This project is a QA bot that can extract text from PDFs, generate embeddings, s
 
 ## Directory Structure
 
-qa_bot/
-├── app/
-│ ├── init.py
-│ ├── main.py
-│ ├── extract.py
-│ ├── embeddings.py
-│ ├── storage.py
-│ ├── query.py
-│ ├── conversation.py
-│ ├── agent.py
-├── requirements.txt
+```bash
+├── Dockerfile
+├── Interim_Budget.pdf
 ├── README.md
+├── ai_ml_assginment.ipynb
+├── app
+│   ├── Interim_Budget.pdf
+│   ├── __init__.py
+│   ├── agent.py
+│   ├── conversation.py
+│   ├── dependencies.py
+│   ├── embeddings.py
+│   ├── extract.py
+│   ├── main.py
+│   ├── query.py
+│   ├── routers.py
+│   ├── storage.py
+│   └── utils.py
+├── docs
+│   ├── flow.puml
+│   ├── sequence.png
+│   └── seuence.puml
+└── requirements.txt
+```
 
 # QA Bot with FastAPI
 
@@ -161,8 +173,6 @@ http://localhost:8000
     ```
 
 ## Architecture
-
-![Architecture Diagram](path/to/architecture-diagram.png)
 
 1. Extract text from PDFs, segment it into chunks, and generate embeddings.
 2. Store embeddings in Pinecone vector database.

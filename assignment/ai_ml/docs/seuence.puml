@@ -1,4 +1,7 @@
-@startuml Sequence Diagram for QA BOT System
+@startuml SequenceDiagram_QA_BOT_System
+title Sequence Diagram for QA BOT System
+
+autonumber
 
 actor User
 participant "User Interface" as UI

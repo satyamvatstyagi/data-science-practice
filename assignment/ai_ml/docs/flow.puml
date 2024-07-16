@@ -1,4 +1,6 @@
-@startuml Flow Diagram for QA BOT System
+@startuml FlowDiagram_QA_BOT_System
+
+title Flow Diagram for QA BOT System
 
 skinparam classAttributeIconSize 0
 
