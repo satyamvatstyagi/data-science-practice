@@ -1,0 +1,33 @@
+@startuml Sequence Diagram for QA BOT System
+
+actor User
+participant "User Interface" as UI
+participant "PDF Extraction Module" as PEM
+participant "Text Segmentation Module" as TSM
+participant "Text Chunk Embedding" as TCE
+participant "Pinecone Vector Database" as PVDB
+participant "Query Processing" as QP
+participant "GPT Integration" as GPT
+participant "Query Refinement Module" as QRM
+participant "Relevant Text Retrieval" as RTR
+
+User -> UI: Extract text from PDF
+UI -> PEM: extractText(pdf)
+PEM -> TSM: segmentText(text)
+TSM -> TCE: generateEmbeddings(chunks)
+TCE -> PVDB: storeEmbeddings(embeddings)
+
+User -> UI: Enter query
+UI -> QP: processQuery(query)
+QP -> PVDB: retrieveEmbeddings(queryVector)
+PVDB --> QP: List of embeddings
+QP -> QRM: refineResults(refinedQuery)
+QRM -> GPT: refineQuery(refinedQuery)
+GPT --> QRM: Refined query
+QRM -> PVDB: retrieveEmbeddings(refinedQueryVector)
+PVDB --> QRM: List of refined embeddings
+QRM -> RTR: retrieveText(refinedEmbeddings)
+RTR --> QRM: List of relevant text chunks
+QRM --> UI: Display results
+
+@enduml

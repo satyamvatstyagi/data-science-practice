@@ -1,0 +1,53 @@
+@startuml Flow Diagram for QA BOT System
+
+skinparam classAttributeIconSize 0
+
+' Define classes
+class PDFExtractionModule {
+  +extractText(): String
+}
+
+class TextSegmentationModule {
+  +segmentText(text: String): List<String>
+}
+
+class TextChunkEmbedding {
+  +generateEmbeddings(chunks: List<String>): List<Vector>
+}
+
+class PineconeVectorDatabase {
+  +storeEmbeddings(embeddings: List<Vector>)
+  +retrieveEmbeddings(queryVector: Vector): List<Vector>
+}
+
+class QueryProcessing {
+  +processQuery(query: String): Vector
+}
+
+class GPTIntegration {
+  +refineQuery(query: String): String
+}
+
+class QueryRefinementModule {
+  +refineResults(refinedQuery: String): List<String>
+}
+
+class RelevantTextRetrieval {
+  +retrieveText(embeddings: List<Vector>): List<String>
+}
+
+class UserInterface {
+  +displayResults(results: List<String>)
+}
+
+' Define relationships
+PDFExtractionModule --> TextSegmentationModule: extract text
+TextSegmentationModule --> TextChunkEmbedding: segment text into chunks
+TextChunkEmbedding --> PineconeVectorDatabase: store embeddings
+QueryProcessing --> PineconeVectorDatabase: retrieve relevant embeddings
+GPTIntegration --> QueryProcessing: refine query
+QueryProcessing --> QueryRefinementModule: process query
+QueryRefinementModule --> RelevantTextRetrieval: refine results
+RelevantTextRetrieval --> UserInterface: display results
+
+@enduml

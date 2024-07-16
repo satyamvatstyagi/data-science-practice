@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+openai
+langchain
+unstructured
+langchain-openai
+langchain-community
+langchain_pinecone
+pypdf
+pinecone-client
